@@ -13,6 +13,7 @@ const useLogout = () => {
 			await signOut();
 			localStorage.removeItem("user-info");
 			logoutUser();
+location.reload();
 		} catch (error) {
 			showToast("Error", error.message, "error");
 		}
